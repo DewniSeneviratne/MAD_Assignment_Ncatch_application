@@ -21,20 +21,31 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
       ),
       home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () {},
-          ),
-          elevation: 0,
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.settings),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(136.0),
+          child: AppBar(
+            leading: IconButton(
+              icon: const Icon(Icons.menu),
               onPressed: () {},
             ),
-          ],
-          title: const Text("Hi Zara"),
+            title: const Text("Hi Zara"),
+            flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFFB2D6FF),
+                    Color(0xFFC7E8FF),
+                    Color(0xFFB0F57F),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+            ),
+          ),
         ),
+          elevation: 0,
+          
 
         //The outer Container is used to apply padding to the content inside the ListView
         body: Container(
