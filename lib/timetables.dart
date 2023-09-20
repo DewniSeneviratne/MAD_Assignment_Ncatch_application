@@ -569,6 +569,8 @@ class _LecturesScreenState extends State<LecturesScreen> {
   }
 
   void _navigateToPage(int index) {
+        final User currentUser =
+        User(batch: "21.1", degree: "Management Information Systems");
     switch (index) {
       case 0:
         Navigator.of(context).pushReplacement(
@@ -577,7 +579,7 @@ class _LecturesScreenState extends State<LecturesScreen> {
         break;
       case 1:
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const Home()),
+          MaterialPageRoute(builder: (context) => LecturesScreen(currentUser: currentUser)),
         );
         break;
       // Add more cases for other pages if needed
