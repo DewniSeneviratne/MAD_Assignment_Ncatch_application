@@ -26,6 +26,7 @@ class _MyAppState extends State<MyApp> {
             icon: const Icon(Icons.menu),
             onPressed: () {},
           ),
+          elevation: 0,
           actions: [
             IconButton(
               icon: const Icon(Icons.settings),
