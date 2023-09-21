@@ -85,6 +85,7 @@ class _MyAppState extends State<MyApp> {
                           ],
                           shape: BoxShape.circle,
                           image: const DecorationImage(
+                            fit: BoxFit.cover,
                             image: AssetImage(
                               'assets/propic.jpg',
                             ),
