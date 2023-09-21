@@ -57,12 +57,26 @@ class _profileState extends State<profile> {
                             Icons.menu,
                             color: Colors.white,
                           ),
-                          Text(
-                            "Hi Zara",
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ), // Add some spacing
+                          SizedBox(
+                            height: 19.0,
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "Hi ",
+                                style: TextStyle(
+                                  fontSize: 36,
+                                ),
+                              ),
+                              Text(
+                                "Zara,",
+                                style: TextStyle(
+                                  fontSize: 36,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
