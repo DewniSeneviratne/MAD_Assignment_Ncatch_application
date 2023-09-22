@@ -8,7 +8,7 @@ class profile extends StatefulWidget {
 }
 
 class _profileState extends State<profile> {
-  bool showPw = false;
+  // bool showPw = false;
 
   @override
   Widget build(BuildContext context) {
@@ -58,20 +58,20 @@ class _profileState extends State<profile> {
                             color: Colors.white,
                           ),
                           SizedBox(
-                            height: 19.0,
+                            height: 6.0,
                           ),
                           Row(
                             children: <Widget>[
                               Text(
                                 "Hi ",
                                 style: TextStyle(
-                                  fontSize: 36,
+                                  fontSize: 33,
                                 ),
                               ),
                               Text(
-                                "Zara,",
+                                "Dulvanya ,",
                                 style: TextStyle(
-                                  fontSize: 36,
+                                  fontSize: 33,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -83,152 +83,195 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.8,
-                width: MediaQuery.of(context).size.width,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(42),
-                    topRight: Radius.circular(42),
-                  ),
-                ),
-                child: GestureDetector(
-                  //provides a gesture recognition framework
-                  onTap: () {
-                    FocusScope.of(context).unfocus();
-                  },
-                  child: ListView(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          const Text(
-                            "edit profile",
-                            style: TextStyle(
-                              fontSize: 22.0,
-                              color: Colors.transparent,
+              Stack(
+                children: <Widget>[
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.79,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(42),
+                        topRight: Radius.circular(42),
+                      ),
+                    ),
+                    child: GestureDetector(
+                      //provides a gesture recognition framework
+                      onTap: () {
+                        FocusScope.of(context).unfocus();
+                      },
+                      child: SizedBox(
+                        height: double.infinity,
+                        child: ListView(
+                          children: [
+                            // const Padding(
+                            //   padding: EdgeInsets.symmetric(horizontal: 32.0),
+                            //   child: Row(
+                            //     mainAxisAlignment:
+                            //         MainAxisAlignment.spaceBetween,
+                            //     crossAxisAlignment: CrossAxisAlignment.start,
+                            //     children: <Widget>[
+                            //       Text(
+                            //         "edit profile",
+                            //         style: TextStyle(
+                            //           fontSize: 22.0,
+                            //           color: Colors.transparent,
+                            //         ),
+                            //       ),
+                            //       // ClipOval(
+                            //       //   child: Image.asset(
+                            //       //     'assets/propsic.jpg', // Replace with your image URL
+                            //       //     width:
+                            //       //         100, // Adjust the width and height as needed
+                            //       //     height: 100,
+                            //       //     fit: BoxFit
+                            //       //         .cover, // You can use different BoxFit values depending on how you want to fit the image
+                            //       //   ),
+                            //       // ),
+                            //     ],
+                            //   ),
+                            // ),
+
+                            const SizedBox(
+                              height: 28.0,
                             ),
-                          ),
-                          Align(
-                            alignment: Alignment.topRight,
-                            child: ClipOval(
-                              child: Image.asset(
-                                'assets/propic.jpg', // Replace with your image URL
-                                width:
-                                    100, // Adjust the width and height as needed
-                                height: 100,
-                                fit: BoxFit
-                                    .cover, // You can use different BoxFit values depending on how you want to fit the image
+
+                            //SizedBox is to add spacing (vertical space) between the "edit profile"
+                            Center(
+                              child: Stack(
+                                children: <Widget>[
+                                  Container(
+                                    width: 120,
+                                    height: 120,
+                                    decoration: BoxDecoration(
+                                      // border: Border.all(
+                                      //     width: 4,
+                                      //     color: Theme.of(context)
+                                      //         .scaffoldBackgroundColor),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            spreadRadius: 3,
+                                            blurRadius: 11,
+                                            color:
+                                                Colors.black.withOpacity(0.1),
+                                            offset: const Offset(0.10, 0.1))
+                                      ],
+                                      shape: BoxShape.circle,
+                                      image: const DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(
+                                          'assets/propic.jpg',
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    bottom: 0,
+                                    right: 0,
+                                    child: Container(
+                                      width: 40,
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: const Icon(
+                                        Icons.edit,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
-                          )
-                        ],
-                      ),
+                            const SizedBox(
+                              height: 21,
+                            ),
+                            textFieldMethod("Name", "Dulvanya Fernando"),
+                            textFieldMethod("Email", "dulvany999@gmail.com"),
+                            textFieldMethod("Phone", "98674354"),
+                            textFieldMethod("Degree", "Software Engineering"),
+                            textFieldMethod("Batch", "22.3"),
+                            textFieldMethod("Year", "One"),
+                            textFieldMethod("Semester", "Two"),
 
-                      const SizedBox(
-                        height: 15.0,
-                      ),
-
-                      //SizedBox is to add spacing (vertical space) between the "edit profile"
-                      Center(
-                        child: Stack(
-                          children: <Widget>[
-                            Container(
-                              width: 130,
-                              height: 130,
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                    width: 4,
-                                    color: Theme.of(context)
-                                        .scaffoldBackgroundColor),
-                                boxShadow: [
-                                  BoxShadow(
-                                      spreadRadius: 7,
-                                      blurRadius: 10,
-                                      color: Colors.black.withOpacity(0.1),
-                                      offset: const Offset(0.10, 0.1))
-                                ],
-                                shape: BoxShape.circle,
-                                image: const DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage(
-                                    'assets/propic.jpg',
+                            const SizedBox(
+                              height: 35,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 49),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    "Cancel",
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        letterSpacing: 2.2,
+                                        color: Colors.black),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 0,
-                              right: 0,
-                              child: Container(
-                                width: 40,
-                                height: 40,
-                                decoration: const BoxDecoration(
-                                  color: Colors.green,
-                                ),
-                                child: const Icon(
-                                  Icons.edit,
-                                  color: Colors.white,
-                                ),
-                              ),
+                                ElevatedButton(
+                                    onPressed: () {},
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.green,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 49),
+                                      elevation: 2,
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                    ),
+                                    child: const Text(
+                                      "SAVE",
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          letterSpacing: 2.2,
+                                          color: Colors.white),
+                                    ))
+                              ],
                             )
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 36,
-                      ),
-                      textFieldMethod("Name", "Harindi", false),
-                      textFieldMethod(
-                          "Email", "eranthikah999@gmail.com", false),
-                      textFieldMethod("Password", "AAAAAAAAA", true),
-                      textFieldMethod("Location", "Colombo", false),
-                      const SizedBox(
-                        height: 35,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          OutlinedButton(
-                            style: OutlinedButton.styleFrom(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 49),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                            ),
-                            onPressed: () {},
-                            child: const Text(
-                              "Cancel",
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  letterSpacing: 2.2,
-                                  color: Colors.black),
-                            ),
-                          ),
-                          ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.green,
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 49),
-                                elevation: 2,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20)),
-                              ),
-                              child: const Text(
-                                "SAVE",
-                                style: TextStyle(
-                                    fontSize: 11,
-                                    letterSpacing: 2.2,
-                                    color: Colors.white),
-                              ))
-                        ],
-                      )
-                    ],
+                    ),
                   ),
-                ),
+                  // const Positioned(
+                  //   child: Padding(
+                  //     padding: EdgeInsets.only(right: 47.0),
+                  //     child: Row(
+                  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //       crossAxisAlignment: CrossAxisAlignment.start,
+                  //       children: <Widget>[
+                  //         Text(
+                  //           "edit profile",
+                  //           style: TextStyle(
+                  //             fontSize: 22.0,
+                  //             color: Colors.black,
+                  //           ),
+                  //         ),
+                  //         // ClipOval(
+                  //         //   child: Image.asset(
+                  //         //     'assets/propic.jpg', // Replace with your image URL
+                  //         //     width:
+                  //         //         100, // Adjust the width and height as needed
+                  //         //     height: 100,
+                  //         //     fit: BoxFit
+                  //         //         .cover, // You can use different BoxFit values depending on how you want to fit the image
+                  //         //   ),
+                  //         // ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                ],
               ),
             ],
           ),
@@ -237,23 +280,25 @@ class _profileState extends State<profile> {
     );
   }
 
-  Widget textFieldMethod(
-      String labelText, String placeholder, bool isPasswordTextField) {
+  Widget textFieldMethod(String labelText, String placeholder) {
+    //if we show/hide password
+    //String labelText, String placeholder, bool isPasswordTextField
+
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(left: 38.0, right: 38.0, bottom: 12.0),
       child: TextField(
-        obscureText: isPasswordTextField ? showPw : false,
+        // obscureText: isPasswordTextField ? showPw : false,
         decoration: InputDecoration(
-          suffixIcon: isPasswordTextField
-              ? IconButton(
-                  onPressed: () {
-                    setState(() {
-                      showPw = !showPw;
-                    });
-                  },
-                  icon: const Icon(Icons.remove_red_eye, color: Colors.grey),
-                )
-              : null,
+          // suffixIcon: isPasswordTextField
+          //     ? IconButton(
+          //         onPressed: () {
+          //           setState(() {
+          //             showPw = !showPw;
+          //           });
+          //         },
+          //         icon: const Icon(Icons.remove_red_eye, color: Colors.grey),
+          //       )
+          //     : null,
           contentPadding: const EdgeInsets.only(bottom: 3),
           labelText: labelText,
           floatingLabelBehavior: FloatingLabelBehavior.always,
