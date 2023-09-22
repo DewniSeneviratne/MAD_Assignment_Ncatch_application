@@ -86,7 +86,7 @@ class _profileState extends State<profile> {
               Stack(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.79,
+                    height: MediaQuery.of(context).size.height * 0.8,
                     width: MediaQuery.of(context).size.width,
                     decoration: const BoxDecoration(
                       color: Colors.white,
@@ -133,7 +133,7 @@ class _profileState extends State<profile> {
                             // ),
 
                             const SizedBox(
-                              height: 28.0,
+                              height: 30.0,
                             ),
 
                             //SizedBox is to add spacing (vertical space) between the "edit profile"
@@ -185,9 +185,11 @@ class _profileState extends State<profile> {
                               ),
                             ),
                             const SizedBox(
-                              height: 21,
+                              height: 15,
                             ),
-                            textFieldMethod("Name", "Dulvanya Fernando"),
+
+                            textFieldMethod("Name", "Dulvanya"),
+
                             textFieldMethod("Email", "dulvany999@gmail.com"),
                             textFieldMethod("Phone", "98674354"),
                             textFieldMethod("Degree", "Software Engineering"),
@@ -196,15 +198,15 @@ class _profileState extends State<profile> {
                             textFieldMethod("Semester", "Two"),
 
                             const SizedBox(
-                              height: 35,
+                              height: 3,
                             ),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: <Widget>[
                                 OutlinedButton(
                                   style: OutlinedButton.styleFrom(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 49),
+                                        horizontal: 29),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(20)),
@@ -214,7 +216,7 @@ class _profileState extends State<profile> {
                                     "Cancel",
                                     style: TextStyle(
                                         fontSize: 14,
-                                        letterSpacing: 2.2,
+                                        letterSpacing: 1,
                                         color: Colors.black),
                                   ),
                                 ),
@@ -223,17 +225,17 @@ class _profileState extends State<profile> {
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.green,
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: 49),
+                                          horizontal: 29),
                                       elevation: 2,
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(20)),
                                     ),
                                     child: const Text(
-                                      "SAVE",
+                                      "Save",
                                       style: TextStyle(
-                                          fontSize: 11,
-                                          letterSpacing: 2.2,
+                                          fontSize: 14,
+                                          letterSpacing: 1,
                                           color: Colors.white),
                                     ))
                               ],
